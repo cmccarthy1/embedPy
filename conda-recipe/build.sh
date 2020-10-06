@@ -4,6 +4,7 @@ if [ $(uname) == Linux ];
 then
 	QLIBDIR=l64
 else
+	xcode-select --install
 	QLIBDIR=m64
 fi
 make p.so
