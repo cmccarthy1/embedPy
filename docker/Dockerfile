@@ -57,6 +57,9 @@ RUN apt-get -yy --option=Dpkg::options::=--force-unsafe-io --no-install-recommen
 RUN passwd -d root
 RUN useradd -s /bin/bash -U -m kx
 
+ENV L64 = $L64
+ENC NEXUS_USER = $NEXUS_USER
+ENV NEXUS_PASS = $NEXUS_PASS
 ENV QHOME=/opt/kx/q
 ENV LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}/opt/conda/lib
 
